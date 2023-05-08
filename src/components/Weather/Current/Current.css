@@ -1,0 +1,15 @@
+/* current animation */
+.current {
+  animation: fade-down 0.5s ease 0s 1 normal forwards;
+  opacity: 0;
+}
+@keyframes fade-down {
+  0% {
+    transform: translateX(-30px) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+  }
+}
