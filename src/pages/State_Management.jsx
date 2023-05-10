@@ -9,6 +9,7 @@ import UseCallback from "../components/State_Management/UseCallback/UseCallback"
 import UseEffect from "../components/State_Management/UseEffect/UseEffect";
 import UseRef from "../components/State_Management/UseRef/UseRef";
 import Context from "../components/State_Management/Context/Context";
+import ReactQuery from "../components/State_Management/ReactQuery/ReactQuery";
 
 export default function State_Management() {
   const [pageNum, setPageNum] = useState(1);
@@ -47,6 +48,7 @@ export default function State_Management() {
     3: (
       <section>
         <Context />
+        <ReactQuery />
       </section>
     ),
   };
