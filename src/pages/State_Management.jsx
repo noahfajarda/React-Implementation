@@ -10,6 +10,7 @@ import UseEffect from "../components/State_Management/UseEffect/UseEffect";
 import UseRef from "../components/State_Management/UseRef/UseRef";
 import Context from "../components/State_Management/Context/Context";
 import ReactQuery from "../components/State_Management/ReactQuery/ReactQuery";
+import Reactlocation from "../components/State_Management/ReactLocation/ReactLocation";
 
 export default function State_Management() {
   const [pageNum, setPageNum] = useState(1);
@@ -49,6 +50,7 @@ export default function State_Management() {
       <section>
         <Context />
         <ReactQuery />
+        <Reactlocation />
       </section>
     ),
   };

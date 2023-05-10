@@ -8,6 +8,7 @@ import { PokemonProvider, usePokemon } from "./DataStore";
 
 // PURPOSE: easily query and mutate data on server
 // let useQuery to MANAGE ALL THE DATA
+// SIMPLIFIED way to QUERY DATA
 
 // STEPS:
 // 1. npm i @tanstack/react-query
