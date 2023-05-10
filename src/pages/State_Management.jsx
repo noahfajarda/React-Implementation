@@ -11,17 +11,62 @@ import UseRef from "../components/State_Management/UseRef/UseRef";
 import Context from "../components/State_Management/Context/Context";
 
 export default function State_Management() {
+  const [pageNum, setPageNum] = useState(1);
+
+  const handlePagePrev = () => {
+    if (pageNum === 2) {
+      setPageNum(1);
+    } else if (pageNum === 3) {
+      setPageNum(2);
+    }
+  };
+
+  const handlePageNext = () => {
+    if (pageNum === 1) {
+      setPageNum(2);
+    } else if (pageNum === 2) {
+      setPageNum(3);
+    }
+  };
+
+  const hookDict = {
+    1: (
+      <section>
+        <UseState />
+        <UseReducer />
+        <UseMemo />
+      </section>
+    ),
+    2: (
+      <section>
+        <UseCallback />
+        <UseEffect />
+        <UseRef />
+      </section>
+    ),
+    3: (
+      <section>
+        <Context />
+      </section>
+    ),
+  };
+
   return (
     <div>
       <Navbar />
       <h1>State Management</h1>
-      <UseState />
-      <UseReducer />
-      <UseMemo />
-      <UseCallback />
-      <UseEffect />
-      <UseRef />
-      <Context />
+      {pageNum > 1 ? (
+        <button onClick={handlePagePrev}>Prev</button>
+      ) : (
+        <div></div>
+      )}
+      {pageNum < 3 ? (
+        <button onClick={handlePageNext}>Next</button>
+      ) : (
+        <div></div>
+      )}
+      {/* render different sections */}
+      {hookDict[pageNum]}
     </div>
   );
 }

@@ -76,6 +76,7 @@ function usePokemonSource(): {
   // useMemo == use a function on every element in an array
   const filteredPokemon = useMemo(
     () =>
+      // limit search to 20 results
       pokemon.filter((p) => p.name.toLowerCase().includes(search)).slice(0, 20),
     [pokemon, search]
   );
