@@ -20,6 +20,8 @@ export default function State_Management() {
       setPageNum(1);
     } else if (pageNum === 3) {
       setPageNum(2);
+    } else if (pageNum === 4) {
+      setPageNum(3);
     }
   };
 
@@ -28,6 +30,8 @@ export default function State_Management() {
       setPageNum(2);
     } else if (pageNum === 2) {
       setPageNum(3);
+    } else if (pageNum === 3) {
+      setPageNum(4);
     }
   };
 
@@ -53,6 +57,7 @@ export default function State_Management() {
         <Reactlocation />
       </section>
     ),
+    4: <section>Placeholder for Zustand</section>,
   };
 
   return (
@@ -64,7 +69,7 @@ export default function State_Management() {
       ) : (
         <div></div>
       )}
-      {pageNum < 3 ? (
+      {pageNum < 4 ? (
         <button onClick={handlePageNext}>Next</button>
       ) : (
         <div></div>
