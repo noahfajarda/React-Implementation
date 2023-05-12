@@ -11,6 +11,7 @@ import UseRef from "../components/State_Management/UseRef/UseRef";
 import Context from "../components/State_Management/Context/Context";
 import ReactQuery from "../components/State_Management/ReactQuery/ReactQuery";
 import Reactlocation from "../components/State_Management/ReactLocation/ReactLocation";
+import Zustand from "../components/State_Management/Zustand/Zustand";
 
 export default function State_Management() {
   const [pageNum, setPageNum] = useState(1);
@@ -57,7 +58,11 @@ export default function State_Management() {
         <Reactlocation />
       </section>
     ),
-    4: <section>Placeholder for Zustand</section>,
+    4: (
+      <section>
+        <Zustand />
+      </section>
+    ),
   };
 
   return (
