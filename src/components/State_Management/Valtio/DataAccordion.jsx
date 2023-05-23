@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
 
-// retrieve 'pokemon' from the 'Zustand' hook
+// retrieve 'pokemon' from the 'Valtio' hook
 export default function Accordion({ title, pokemon }) {
   const [show, setShow] = useState(false);
 
@@ -23,7 +23,7 @@ export default function Accordion({ title, pokemon }) {
       </div>
 
       <AnimatePresence>
-        {/* iterate the 'Zustand' created pokemon */}
+        {/* iterate the 'Valtio' created pokemon */}
         {show && pokemon?.length != 0 ? (
           <motion.div
             initial={{ height: 0 }}
