@@ -1,9 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 
 import { BiChevronDown } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
-
-import { usePokemon } from "./DataStore";
 
 // retrieve 'pokemon' from the 'Zustand' hook
 export default function Accordion({ title, pokemon }) {

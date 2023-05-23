@@ -21,6 +21,8 @@ function SearchBox() {
   );
 }
 
+// Zustand === custom hook that will manage a store
+
 export default function Zustand() {
   // retrieve 'Zustand' state variable
   const pokemon = usePokemon((state) => state.pokemon);
