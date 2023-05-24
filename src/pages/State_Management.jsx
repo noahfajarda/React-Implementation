@@ -14,6 +14,7 @@ import Reactlocation from "../components/State_Management/ReactLocation/ReactLoc
 import Zustand from "../components/State_Management/Zustand/Zustand";
 import Valtio from "../components/State_Management/Valtio/Valtio";
 import Jotai from "../components/State_Management/Jotai/Jotai";
+import Redux from "../components/State_Management/Redux/Redux";
 
 export default function State_Management() {
   const [pageNum, setPageNum] = useState(1);
@@ -65,6 +66,7 @@ export default function State_Management() {
         <Zustand />
         <Valtio />
         <Jotai />
+        <Redux />
       </section>
     ),
   };
