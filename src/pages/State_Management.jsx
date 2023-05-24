@@ -12,6 +12,8 @@ import Context from "../components/State_Management/Context/Context";
 import ReactQuery from "../components/State_Management/ReactQuery/ReactQuery";
 import Reactlocation from "../components/State_Management/ReactLocation/ReactLocation";
 import Zustand from "../components/State_Management/Zustand/Zustand";
+import Valtio from "../components/State_Management/Valtio/Valtio";
+import Jotai from "../components/State_Management/Jotai/Jotai";
 
 export default function State_Management() {
   const [pageNum, setPageNum] = useState(1);
@@ -61,6 +63,8 @@ export default function State_Management() {
     4: (
       <section>
         <Zustand />
+        <Valtio />
+        <Jotai />
       </section>
     ),
   };
