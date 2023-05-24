@@ -26,9 +26,11 @@ const [allPokemon] = atomsWithQuery<Pokemon[]>(() => ({
 
 // pokemonAtom RELYS ON searchAtom & 'allPokemon' atom
 export const pokemonAtom = atom((get) => {
+  // retrieve 'search' query & all 'pokemon' array
   const search = get(searchAtom).toLowerCase();
   const all = get(allPokemon);
 
+  // return all pokemon if there's no search term
   if (!search) return all;
 
   return all.filter((p) => p.name.toLowerCase().includes(search));
@@ -36,9 +38,11 @@ export const pokemonAtom = atom((get) => {
 
 // sortedPokemonAtom RELYS ON pokemonAtom
 export const sortedPokemonAtom = atom((get) => {
+  // retrieve 'search' query & sorted 'pokemon' array
   const search = get(searchAtom).toLowerCase();
   const pokemon = get(pokemonAtom);
 
+  // return sorted pokemon if there's no search term
   if (!search) return pokemon;
 
   return pokemon.slice(0, 10).sort((a, b) => a.name.localeCompare(b.name));
