@@ -10,6 +10,7 @@ import Hooks from "./pages/Hooks";
 import Weather from "./pages/Weather";
 import NBA_API from "./pages/NBA_API";
 import State_Management from "./pages/State_Management";
+import HOC from "./pages/HOC";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/weather" element={<Weather />} />
             <Route path="/nba-api" element={<NBA_API />} />
             <Route path="/state-management" element={<State_Management />} />
+            <Route path="/hoc" element={<HOC />} />
             <Route path="*" element={<Default />} />
           </Routes>
         </Suspense>

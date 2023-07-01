@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className="w-full">
       <div>Navbar</div>
-      <nav className="flex justify-between">
+      <nav className="flex flex-col md:flex-row justify-between">
         {/* Link == WON'T REFRESH PAGE */}
         <Link to="/">
           <button>Main</button>
@@ -15,6 +15,9 @@ export default function Navbar() {
         </Link>
         <Link to="/state-management">
           <button>State Management</button>
+        </Link>
+        <Link to="/hoc">
+          <button>HOC</button>
         </Link>
         <Link to="/weather">
           <button>Weather</button>
