@@ -1,6 +1,6 @@
 import React from "react";
-import Person1 from "../../../../HOC-React-Higher-Order-Components/src/components/Person1";
-import Person2 from "../../../../HOC-React-Higher-Order-Components/src/components/Person2";
+import Person1 from "./Person1/Person1";
+import Person2 from "./Person2/Person2";
 
 export default function HOCMain() {
   return (
